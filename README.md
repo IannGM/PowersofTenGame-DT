@@ -1,1 +1,0 @@
-# PowersofTenGame-DT
