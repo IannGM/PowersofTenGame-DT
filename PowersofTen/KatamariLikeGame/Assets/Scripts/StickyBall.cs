@@ -33,7 +33,8 @@ public class StickyBall : MonoBehaviour
     bool group3Unlocked = false;
 
     // Pickup Sound Reference
-    public AudioClip pickupSound;
+    public AudioClip guitar;
+    public AudioClip saxophone;
 
     public GameObject sizeUI;
 
@@ -64,7 +65,7 @@ public class StickyBall : MonoBehaviour
         this.transform.GetComponent<Rigidbody>().AddForce(new Vector3(unitv2.x, 0, unitv2.y) * z * 3);
 
         // Set Camera Position Behidn the Ball based on rotation
-        cameraReference.transform.position = new Vector3(-unitv2.x * distanceToCamera, distanceToCamera, -unitv2.y * distanceToCamera) + this.transform.position;
+        cameraReference.transform.position = new Vector3(-unitv2.x * distanceToCamera, distanceToCamera - 2.5f, -unitv2.y * distanceToCamera) + this.transform.position;
 
         unlockPickupGroups();
 
@@ -142,7 +143,60 @@ public class StickyBall : MonoBehaviour
                 sizeUI.GetComponent<Text>().text = "Mass: " + Math.Round(size, 2).ToString();
 
                 // Sound effect when we Pick up a Sticky Object
-                this.GetComponent<AudioSource>().PlayOneShot(pickupSound);
+                this.GetComponent<AudioSource>().PlayOneShot(guitar);
+
+                // Print to Console, works like println () in Processing or print() in p5
+                Debug.Log(size);
+
+            }
+        }
+
+        if (other.transform.CompareTag("Guitar"))
+        {
+            if (0 < size)
+            {
+
+                // Grow the Sticky Ball
+                transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
+                size += 0.1f;
+
+                // Disable so that the objects will only stick to your sphere
+                other.enabled = false;
+
+                // Becomes Child so it stays with the ball
+                other.transform.SetParent(this.transform);
+
+                // Create text in the public GameObject sizeUI. Math.Round rounds off the sticky ball size to one decimals
+                sizeUI.GetComponent<Text>().text = "Mass: " + Math.Round(size, 2).ToString();
+
+                // Sound effect when we Pick up a Sticky Object
+                this.GetComponent<AudioSource>().PlayOneShot(guitar);
+
+                // Print to Console, works like println () in Processing or print() in p5
+                Debug.Log(size);
+
+            }
+        }
+        if (other.transform.CompareTag("Saxophone"))
+        {
+            if (0 < size)
+            {
+
+                // Grow the Sticky Ball
+                transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
+                size += 0.1f;
+
+                // Disable so that the objects will only stick to your sphere
+                other.enabled = false;
+
+                // Becomes Child so it stays with the ball
+                other.transform.SetParent(this.transform);
+
+                // Create text in the public GameObject sizeUI. Math.Round rounds off the sticky ball size to one decimals
+                sizeUI.GetComponent<Text>().text = "Mass: " + Math.Round(size, 2).ToString();
+
+                // Sound effect when we Pick up a Sticky Object
+                this.GetComponent<AudioSource>().PlayOneShot(saxophone);
 
                 // Print to Console, works like println () in Processing or print() in p5
                 Debug.Log(size);
@@ -151,4 +205,3 @@ public class StickyBall : MonoBehaviour
         }
     }
 }
-

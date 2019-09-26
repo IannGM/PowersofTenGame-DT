@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Sticky
+  - Guitar
+  - Saxophone
   layers:
   - Default
   - TransparentFX

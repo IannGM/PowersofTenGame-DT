@@ -7,10 +7,15 @@ public class CameraLookAtBall : MonoBehaviour
 
     public GameObject ball;
     Vector3 lookAtOffset;
+
+    // rotation variables for the camera
+    public float xAngle, yAngle, zAngle;
+
     // Start is called before the first frame update
     void Start()
     {
         lookAtOffset = new Vector3(0, 1.5f, 0);
+         
     }
 
     // Update is called once per frame
@@ -18,5 +23,6 @@ public class CameraLookAtBall : MonoBehaviour
     {
         //look at ball
         transform.LookAt(ball.transform.position + lookAtOffset);
+
     }
 }
