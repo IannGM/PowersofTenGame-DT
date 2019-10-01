@@ -35,6 +35,13 @@ public class StickyBall : MonoBehaviour
     // Pickup Sound Reference
     public AudioClip guitar;
     public AudioClip saxophone;
+    public AudioClip piano;
+    public AudioClip bass;
+    public AudioClip speakers;
+    public AudioClip flute;
+    public AudioClip disk;
+    public AudioClip headphones;
+    public AudioClip bongos;
 
     public GameObject sizeUI;
 
@@ -197,6 +204,188 @@ public class StickyBall : MonoBehaviour
 
                 // Sound effect when we Pick up a Sticky Object
                 this.GetComponent<AudioSource>().PlayOneShot(saxophone);
+
+                // Print to Console, works like println () in Processing or print() in p5
+                Debug.Log(size);
+
+            }
+        }
+        if (other.transform.CompareTag("Piano"))
+        {
+            if (0 < size)
+            {
+
+                // Grow the Sticky Ball
+                transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
+                size += 0.1f;
+
+                // Disable so that the objects will only stick to your sphere
+                other.enabled = false;
+
+                // Becomes Child so it stays with the ball
+                other.transform.SetParent(this.transform);
+
+                // Create text in the public GameObject sizeUI. Math.Round rounds off the sticky ball size to one decimals
+                sizeUI.GetComponent<Text>().text = "Mass: " + Math.Round(size, 2).ToString();
+
+                // Sound effect when we Pick up a Sticky Object
+                this.GetComponent<AudioSource>().PlayOneShot(piano);
+
+                // Print to Console, works like println () in Processing or print() in p5
+                Debug.Log(size);
+
+            }
+        }
+        if (other.transform.CompareTag("Bass"))
+        {
+            if (0 < size)
+            {
+
+                // Grow the Sticky Ball
+                transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
+                size += 0.1f;
+
+                // Disable so that the objects will only stick to your sphere
+                other.enabled = false;
+
+                // Becomes Child so it stays with the ball
+                other.transform.SetParent(this.transform);
+
+                // Create text in the public GameObject sizeUI. Math.Round rounds off the sticky ball size to one decimals
+                sizeUI.GetComponent<Text>().text = "Mass: " + Math.Round(size, 2).ToString();
+
+                // Sound effect when we Pick up a Sticky Object
+                this.GetComponent<AudioSource>().PlayOneShot(bass);
+
+                // Print to Console, works like println () in Processing or print() in p5
+                Debug.Log(size);
+
+            }
+        }
+        if (other.transform.CompareTag("Speakers"))
+        {
+            if (0 < size)
+            {
+
+                // Grow the Sticky Ball
+                transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
+                size += 0.1f;
+
+                // Disable so that the objects will only stick to your sphere
+                other.enabled = false;
+
+                // Becomes Child so it stays with the ball
+                other.transform.SetParent(this.transform);
+
+                // Create text in the public GameObject sizeUI. Math.Round rounds off the sticky ball size to one decimals
+                sizeUI.GetComponent<Text>().text = "Mass: " + Math.Round(size, 2).ToString();
+
+                // Sound effect when we Pick up a Sticky Object
+                this.GetComponent<AudioSource>().PlayOneShot(speakers);
+
+                // Print to Console, works like println () in Processing or print() in p5
+                Debug.Log(size);
+
+            }
+        }
+        if (other.transform.CompareTag("Flute"))
+        {
+            if (0 < size)
+            {
+
+                // Grow the Sticky Ball
+                transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
+                size += 0.1f;
+
+                // Disable so that the objects will only stick to your sphere
+                other.enabled = false;
+
+                // Becomes Child so it stays with the ball
+                other.transform.SetParent(this.transform);
+
+                // Create text in the public GameObject sizeUI. Math.Round rounds off the sticky ball size to one decimals
+                sizeUI.GetComponent<Text>().text = "Mass: " + Math.Round(size, 2).ToString();
+
+                // Sound effect when we Pick up a Sticky Object
+                this.GetComponent<AudioSource>().PlayOneShot(flute);
+
+                // Print to Console, works like println () in Processing or print() in p5
+                Debug.Log(size);
+
+            }
+        }
+        if (other.transform.CompareTag("Disk"))
+        {
+            if (0 < size)
+            {
+
+                // Grow the Sticky Ball
+                transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
+                size += 0.1f;
+
+                // Disable so that the objects will only stick to your sphere
+                other.enabled = false;
+
+                // Becomes Child so it stays with the ball
+                other.transform.SetParent(this.transform);
+
+                // Create text in the public GameObject sizeUI. Math.Round rounds off the sticky ball size to one decimals
+                sizeUI.GetComponent<Text>().text = "Mass: " + Math.Round(size, 2).ToString();
+
+                // Sound effect when we Pick up a Sticky Object
+                this.GetComponent<AudioSource>().PlayOneShot(disk);
+
+                // Print to Console, works like println () in Processing or print() in p5
+                Debug.Log(size);
+
+            }
+        }
+        if (other.transform.CompareTag("Bongos"))
+        {
+            if (0 < size)
+            {
+
+                // Grow the Sticky Ball
+                transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
+                size += 0.1f;
+
+                // Disable so that the objects will only stick to your sphere
+                other.enabled = false;
+
+                // Becomes Child so it stays with the ball
+                other.transform.SetParent(this.transform);
+
+                // Create text in the public GameObject sizeUI. Math.Round rounds off the sticky ball size to one decimals
+                sizeUI.GetComponent<Text>().text = "Mass: " + Math.Round(size, 2).ToString();
+
+                // Sound effect when we Pick up a Sticky Object
+                this.GetComponent<AudioSource>().PlayOneShot(bongos);
+
+                // Print to Console, works like println () in Processing or print() in p5
+                Debug.Log(size);
+
+            }
+        }
+        if (other.transform.CompareTag("Headphones"))
+        {
+            if (0 < size)
+            {
+
+                // Grow the Sticky Ball
+                transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
+                size += 0.1f;
+
+                // Disable so that the objects will only stick to your sphere
+                other.enabled = false;
+
+                // Becomes Child so it stays with the ball
+                other.transform.SetParent(this.transform);
+
+                // Create text in the public GameObject sizeUI. Math.Round rounds off the sticky ball size to one decimals
+                sizeUI.GetComponent<Text>().text = "Mass: " + Math.Round(size, 2).ToString();
+
+                // Sound effect when we Pick up a Sticky Object
+                this.GetComponent<AudioSource>().PlayOneShot(headphones);
 
                 // Print to Console, works like println () in Processing or print() in p5
                 Debug.Log(size);

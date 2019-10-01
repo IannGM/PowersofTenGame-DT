@@ -7,6 +7,13 @@ TagManager:
   - Sticky
   - Guitar
   - Saxophone
+  - Headphones
+  - Bongos
+  - Disk
+  - Flute
+  - Speakers
+  - Piano
+  - Bass
   layers:
   - Default
   - TransparentFX
