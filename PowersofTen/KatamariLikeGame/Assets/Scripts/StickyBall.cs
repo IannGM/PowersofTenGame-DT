@@ -37,10 +37,10 @@ public class StickyBall : MonoBehaviour
     public AudioClip saxophone;
     public AudioClip piano;
     public AudioClip bass;
-    public AudioClip speakers;
+    //public AudioClip speakers;
     public AudioClip flute;
     public AudioClip disk;
-    public AudioClip headphones;
+    //public AudioClip headphones;
     public AudioClip bongos;
 
     public GameObject sizeUI;
@@ -262,32 +262,32 @@ public class StickyBall : MonoBehaviour
 
             }
         }
-        if (other.transform.CompareTag("Speakers"))
-        {
-            if (0 < size)
-            {
+        //if (other.transform.CompareTag("Speakers"))
+        //{
+        //    if (0 < size)
+        //    {
 
-                // Grow the Sticky Ball
-                transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
-                size += 0.1f;
+        //        // Grow the Sticky Ball
+        //        transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
+        //        size += 0.1f;
 
-                // Disable so that the objects will only stick to your sphere
-                other.enabled = false;
+        //        // Disable so that the objects will only stick to your sphere
+        //        other.enabled = false;
 
-                // Becomes Child so it stays with the ball
-                other.transform.SetParent(this.transform);
+        //        // Becomes Child so it stays with the ball
+        //        other.transform.SetParent(this.transform);
 
-                // Create text in the public GameObject sizeUI. Math.Round rounds off the sticky ball size to one decimals
-                sizeUI.GetComponent<Text>().text = "Mass: " + Math.Round(size, 2).ToString();
+        //        // Create text in the public GameObject sizeUI. Math.Round rounds off the sticky ball size to one decimals
+        //        sizeUI.GetComponent<Text>().text = "Mass: " + Math.Round(size, 2).ToString();
 
-                // Sound effect when we Pick up a Sticky Object
-                this.GetComponent<AudioSource>().PlayOneShot(speakers);
+        //        // Sound effect when we Pick up a Sticky Object
+        //        this.GetComponent<AudioSource>().PlayOneShot(speakers);
 
-                // Print to Console, works like println () in Processing or print() in p5
-                Debug.Log(size);
+        //        // Print to Console, works like println () in Processing or print() in p5
+        //        Debug.Log(size);
 
-            }
-        }
+        //    }
+        //}
         if (other.transform.CompareTag("Flute"))
         {
             if (0 < size)
@@ -366,31 +366,31 @@ public class StickyBall : MonoBehaviour
 
             }
         }
-        if (other.transform.CompareTag("Headphones"))
-        {
-            if (0 < size)
-            {
+        //if (other.transform.CompareTag("Headphones"))
+        //{
+        //    if (0 < size)
+        //    {
 
-                // Grow the Sticky Ball
-                transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
-                size += 0.1f;
+        //        // Grow the Sticky Ball
+        //        transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
+        //        size += 0.1f;
 
-                // Disable so that the objects will only stick to your sphere
-                other.enabled = false;
+        //        // Disable so that the objects will only stick to your sphere
+        //        other.enabled = false;
 
-                // Becomes Child so it stays with the ball
-                other.transform.SetParent(this.transform);
+        //        // Becomes Child so it stays with the ball
+        //        other.transform.SetParent(this.transform);
 
-                // Create text in the public GameObject sizeUI. Math.Round rounds off the sticky ball size to one decimals
-                sizeUI.GetComponent<Text>().text = "Mass: " + Math.Round(size, 2).ToString();
+        //        // Create text in the public GameObject sizeUI. Math.Round rounds off the sticky ball size to one decimals
+        //        sizeUI.GetComponent<Text>().text = "Mass: " + Math.Round(size, 2).ToString();
 
-                // Sound effect when we Pick up a Sticky Object
-                this.GetComponent<AudioSource>().PlayOneShot(headphones);
+        //        // Sound effect when we Pick up a Sticky Object
+        //        this.GetComponent<AudioSource>().PlayOneShot(headphones);
 
-                // Print to Console, works like println () in Processing or print() in p5
-                Debug.Log(size);
+        //        // Print to Console, works like println () in Processing or print() in p5
+        //        Debug.Log(size);
 
-            }
-        }
+        //    }
+        //}
     }
 }
